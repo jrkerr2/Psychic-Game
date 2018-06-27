@@ -12,8 +12,11 @@ var gameStuff = {
     
 
 }
-gameStuff.guess = prompt("What's your guess?")
 
+function displayprompt() {
+    gameStuff.guess = prompt("What's your guess?");
+
+}
 
 //need random function to equate to alpha letter
 
@@ -54,3 +57,5 @@ for (i=0; i<10; i++) {
 //need function to increment wins or losses, decrement guesses; else reset guesses guessLeft = 0
 
 //print gameStuff totals on page (console.log too?)
+console.log(gameStuff.win)
+console.log(gamestuff.loss)
