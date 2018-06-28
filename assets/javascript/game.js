@@ -13,7 +13,10 @@ var gameStuff = {
 
 }
 
+//var gUserguesses = gameStuff.guessLeft
+
 function displayprompt() {
+    setTimeout(displayprompt, 5000); 
     gameStuff.guess = prompt("What's your guess?");
 
 }
@@ -21,32 +24,36 @@ function displayprompt() {
 //need random function to equate to alpha letter
 
 //need function to capture key entered -- document.keyup()?
-for (i=0; i<10; i++) {
-    if (gameStuff.guess == game.Stuff.gameAnswer && game.Stuff.guessLeft > 0) {
-        alert("You win!")
-        gameStuff.win =+1;
-        gameStuff.gameOver = true;
-        break;
+function rungame() {
+    for (i=0; i<10; i++) {
+        if (gameStuff.guess == gameStuff.gameAnswer && gameStuff.guessLeft > 0) {
+            alert("You win! Refresh the browser to play again.")
+            gameStuff.win =+1;
+            gameStuff.gameOver = true;
+            break;
 
-    } 
-    
-    else if (gameStuff.guessLeft == 0){
+        } 
         
-        alert("You lose!");
-        gameStuff.loss =+1;
-
-    }
-
-    else if (gameStuff.guessLeft > 0){
+        else if (gameStuff.guessLeft == 0) {
             
-        gameStuff.guessSofar = (gameStuff.guessSofar + gameStuff.guess); //string -- do I need quotes?
-        gameStuff.guessLeft =-1;
+            alert("You lose! Refresh the browser to play again.");
+            gameStuff.loss =+1;
+            break;
+
+
+        }
+
+        else if (gameStuff.guessLeft > 0){
+                
+            gameStuff.guessSofar = (gameStuff.guessSofar + gameStuff.guess); //string -- do I need quotes?
+            gameStuff.guessLeft =-1;
+            rungame();
+
+        }
 
     }
 
 }
-
-
 
 
 //update guessSofar in a concatenated string("")
@@ -57,5 +64,5 @@ for (i=0; i<10; i++) {
 //need function to increment wins or losses, decrement guesses; else reset guesses guessLeft = 0
 
 //print gameStuff totals on page (console.log too?)
-console.log(gameStuff.win)
-console.log(gamestuff.loss)
+//console.log(gameStuff.win)
+//console.log(gamestuff.loss)
