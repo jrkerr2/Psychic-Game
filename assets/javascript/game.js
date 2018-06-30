@@ -10,13 +10,12 @@ var gameStuff = {
     gameOver: false,
     gameAnswer: 2,
     
-
 }
 
 //var gUserguesses = gameStuff.guessLeft
 
 function displayprompt() {
-    setTimeout(displayprompt, 5000); 
+    //setTimeout(displayprompt, 5000); 
     gameStuff.guess = prompt("What's your guess?");
 
 }
@@ -24,6 +23,8 @@ function displayprompt() {
 //need random function to equate to alpha letter
 
 //need function to capture key entered -- document.keyup()?
+
+//need function to iterate over guesses and compare to actual
 function rungame() {
     for (i=0; i<10; i++) {
         if (gameStuff.guess == gameStuff.gameAnswer && gameStuff.guessLeft > 0) {
@@ -44,25 +45,25 @@ function rungame() {
         }
 
         else if (gameStuff.guessLeft > 0){
-                
+
+            //update guessSofar in a concatenated string("")  
             gameStuff.guessSofar = (gameStuff.guessSofar + gameStuff.guess); //string -- do I need quotes?
+            //decrement guesses left to user
             gameStuff.guessLeft =-1;
+            //write cumulation of guesses to html
+            document.getElementById("uGuess").innerHTML = gameStuff.guessSofar;
             rungame();
+        
+        }
+            
 
         }
 
     }
 
-}
-
-
-//update guessSofar in a concatenated string("")
-
 
 //need function to iterate over guesses and compare to actual
 
-//need function to increment wins or losses, decrement guesses; else reset guesses guessLeft = 0
+
 
 //print gameStuff totals on page (console.log too?)
-//console.log(gameStuff.win)
-//console.log(gamestuff.loss)
