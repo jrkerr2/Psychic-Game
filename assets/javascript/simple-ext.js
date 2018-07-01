@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var noGuess = document.querySelector("#rGuesses");
     var uWin = document.querySelector("#wins");
     var uLoss = document.querySelector("#loss");
+    console.log(uInput);
     
 
     // button stuff
