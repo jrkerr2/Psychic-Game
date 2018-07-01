@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
     // game variables
+    var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
+    'm','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     var answer = 5;
     var userGuess = 0;
 
@@ -26,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
         userGuess = parseInt(input.value);
 
         if(userGuess > answer) {
-            output.innerHTML = "That's too high.";
+            output.innerHTML = "Too high.";
         }
 
         else if(userGuess < answer) {
-            output.innerHTML = "That's too low.";
+            output.innerHTML = "Too low.";
         }
 
         else {
