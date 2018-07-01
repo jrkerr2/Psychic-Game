@@ -1,8 +1,8 @@
 # Psychic-Game
 
-    - This is a work in progress; as of Sunday afternoon, the files are in disarray, reflecting multiple attempts at a solution. 
+- This is a work in progress; as of Sunday afternoon, the files are in disarray, reflecting multiple attempts at a solution. 
 
-    - But if you pay attention to the release notes, and the other examples, I think the reader/grader can see what I've done and where -- AND -- that I've learned a lot with this simple exercise that took multiple attempts over multiple days totalling many hour of coding, reading, and watching tutorials for guidance.
+- But if you pay attention to the release notes, and the other examples, I think the reader/grader can see what I've done and where -- AND -- that I've learned a lot with this simple exercise that took multiple attempts over multiple days totalling many hour of coding, reading, and watching tutorials for guidance.
 
 - Sunday PM Update: I think I have a working version! There are still some defects in the application (**start with iexample.html** + **igame.js**);
     * Wrapping game play into a function (partial or full) seemed like a good idea, but the results were buggy, so I CTRL-Z'd my way back to the orginal working structure
